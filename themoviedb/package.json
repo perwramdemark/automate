@@ -1,0 +1,11 @@
+{
+  "name": "themoviedb",
+  "version": "1.0.0",
+  "description": "Integration towards themoviedb",
+  "main": "main.js",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "automate": "0.0.0"
+}
+}
