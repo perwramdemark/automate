@@ -16,6 +16,7 @@
     "node": ">=21"
   },
   "scripts": {
+    "prettier": "npx prettier . --check",
     "test": "vitest"
   }
 }

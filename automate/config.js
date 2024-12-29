@@ -7,7 +7,10 @@ export default class Config {
   }
 
   validate() {
-    const requiredVars = ['THEMOVIEDB_READ_TOKEN', 'THEMOVIEDB_ACCOUNT_OBJECT_ID']
+    const requiredVars = [
+      'THEMOVIEDB_READ_TOKEN',
+      'THEMOVIEDB_ACCOUNT_OBJECT_ID',
+    ]
     const missingVars = requiredVars.filter((key) => !process.env[key])
 
     if (missingVars.length > 0) {
