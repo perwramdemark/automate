@@ -4,12 +4,12 @@ export default class TMDbApi {
   constructor() {
     this.config = new Config()
     this.baseUrl = 'https://api.themoviedb.org/4'
-    this.accountId = this.config.get('ACCOUNT_OBJECT_ID')
+    this.accountId = this.config.get('THEMOVIEDB_ACCOUNT_OBJECT_ID')
     this.fetchConfig = {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${this.config.get('READ_TOKEN')}`,
+        Authorization: `Bearer ${this.config.get('THEMOVIEDB_READ_TOKEN')}`,
       },
     }
   }

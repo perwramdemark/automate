@@ -1,14 +1,21 @@
 {
   "name": "automate",
-  "version": "0.0.0",
+  "version": "0.0.8",
   "description": "Project to automate data between my favourite services",
-  "main": "automate.js",
   "type": "module",
   "dependencies": {
-    "dotenv": "16.4.7"
+    "dotenv": "16.4.7",
+    "lowdb": "7.0.1"
   },
   "devDependencies": {
-    "prettier": "3.4.2"
+    "prettier": "3.4.2",
+    "vitest": "2.1.8"
   },
-  "private": true
+  "private": true,
+  "engines": {
+    "node": ">=21"
+  },
+  "scripts": {
+    "test": "vitest"
+  }
 }
