@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./automate
+        working-directory: automate
     strategy:
       matrix:
         node-version: [ 18.x, 20.x, 22.x ]
@@ -28,6 +28,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
       - run: npm ci
       - run: npm run prettier
       - run: npm test
