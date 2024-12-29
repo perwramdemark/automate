@@ -28,10 +28,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-      - name: Install automate
-        run: npm ci
-      - name: Prettier automate
-        run: npm run prettier
-      - name: Test automate
-        run: npm test
-        working-directory: ./automate
+      - run: npm ci
+      - run: npm run prettier
+      - run: npm test
