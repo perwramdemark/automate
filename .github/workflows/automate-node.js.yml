@@ -21,7 +21,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version-file: 'automate/packge.json'
+          node-version-file: 'package.json'
           cache: 'npm'
           cache-dependency-path: 'automate/package-lock.json'
       - run: npm ci
