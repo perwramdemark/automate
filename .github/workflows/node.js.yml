@@ -13,7 +13,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        working-directory: ./automate
     strategy:
       matrix:
         node-version: [ 18.x, 20.x, 22.x ]
@@ -28,10 +30,8 @@ jobs:
           cache: 'npm'
       - name: Install automate
         run: npm ci
-        working-directory: ./automate
       - name: Prettier automate
-        run: npm prettier
-        working-directory: ./automate
+        run: npm run prettier
       - name: Test automate
         run: npm test
         working-directory: ./automate
