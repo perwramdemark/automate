@@ -3,12 +3,11 @@ import {LowdbBase} from 'automate/database/lowdb.js'
 export class TheMovieDbStorage extends LowdbBase {
 
   constructor(filename) {
-    super(filename)
+    super('sources/themoviedb/' + filename)
   }
 
-  async findItemById(id) {
-    const items = await this.getCollection()
-    return items.find(item => item.id === id)
+  async getList() {
+    return await this.getCollection()
   }
 
   async addItemOrItems(newItemOrItems) {

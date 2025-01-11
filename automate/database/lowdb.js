@@ -1,8 +1,11 @@
 import { JSONFilePreset } from 'lowdb/node'
+import path from 'path'
+import Config from '../config.js'
 
 export class LowdbBase {
   constructor(filePath) {
-    this.filePath = filePath
+    const config = new Config()
+    this.filePath = path.resolve(config.get('FOLDER'), filePath)
   }
 
   async #init() {

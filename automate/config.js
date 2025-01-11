@@ -8,6 +8,8 @@ export default class Config {
 
   validate() {
     const requiredVars = [
+      'FOLDER',
+      'LANGUAGE',
       'THEMOVIEDB_READ_TOKEN',
       'THEMOVIEDB_ACCOUNT_OBJECT_ID',
     ]
